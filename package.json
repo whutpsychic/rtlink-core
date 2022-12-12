@@ -1,6 +1,6 @@
 {
   "name": "rtlink-core",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "This is core service codes for rtlink com developed in js by zbc",
   "main": "index.js",
   "scripts": {

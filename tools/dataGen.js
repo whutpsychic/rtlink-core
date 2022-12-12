@@ -33,7 +33,11 @@ m.genDatesArr = (date, n) => {
 	// moment
 	if (date._isAMomentObject) {
 		for (let i = 0; i < n; i++) {
-			result.unshift(date.subtract(1, "days").format("YYYY-MM-DD"));
+			if (i === 0) {
+				result.unshift(date.format("YYYY-MM-DD"));
+			} else {
+				result.unshift(date.subtract(1, "days").format("YYYY-MM-DD"));
+			}
 		}
 	} else {
 		throw new Error(
@@ -51,7 +55,11 @@ m.genMonthsArr = (month, n) => {
 	// moment
 	if (month._isAMomentObject) {
 		for (let i = 0; i < n; i++) {
-			result.unshift(month.subtract(1, "months").format("YYYY-MM"));
+			if (i === 0) {
+				result.unshift(month.format("YYYY-MM"));
+			} else {
+				result.unshift(month.subtract(1, "months").format("YYYY-MM"));
+			}
 		}
 	} else {
 		throw new Error("genDatesArr函数中参数date不是一个moment对象");
