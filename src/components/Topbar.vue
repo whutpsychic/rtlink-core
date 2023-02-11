@@ -4,17 +4,17 @@
       <p># Rtlink-core</p>
     </div>
     <div class="right-content">
-      <el-menu :default-active="'2'" class="top-menu-can" mode="horizontal" @select="handleSelect">
+      <el-menu :default-active="'2'" class="top-menu-can" mode="horizontal" @select="handleSelect" :ellipsis="false">
         <el-menu-item index="1">指南</el-menu-item>
         <el-menu-item index="2">文档</el-menu-item>
       </el-menu>
       <span>{{ version }}</span>
       <el-icon>
-        <Sunny />
+        <sunny />
       </el-icon>
       <el-switch :value="nightMode" active-color="#000" inactive-color="#ddd" @change="toggleViewMode" />
       <el-icon>
-        <Moon />
+        <moon />
       </el-icon>
       <el-select v-model="lang" class="lang-selector" @change="chooseLang">
         <el-option v-for="item in langs" :key="item.value" :label="item.label" :value="item.value" />
@@ -100,7 +100,6 @@ export default {
 
   .top-menu-can {
     border-bottom: none;
-    min-width: 200px;
   }
 
   .lang-selector {
