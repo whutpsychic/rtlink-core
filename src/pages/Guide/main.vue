@@ -1,6 +1,6 @@
 <template>
   <div class="main-content">
-    <p>Document</p>
+    <p>Guide</p>
   </div>
 </template>
 

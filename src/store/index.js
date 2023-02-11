@@ -5,15 +5,17 @@ const store = createStore({
   state() {
     return {
       // 当前使用的语言
-      language: "简体中文"
+      language: "简体中文",
+      // 是否开启黑夜模式
+      nightMode: false,
     }
   },
   mutations: {
     changeLanguage(state, lang) {
       state.language = lang
     },
-    increment(state) {
-      state.count++
+    toggleViewMode(state, mode) {
+      state.nightMode = mode
     }
   }
 })

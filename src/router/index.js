@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Document from '../pages/Document/main.vue'
+import Guide from '../pages/Guide/main.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -12,6 +13,11 @@ const router = createRouter({
       path: '/document',
       name: 'document',
       component: Document
+    },
+    {
+      path: '/guide',
+      name: 'guide',
+      component: Guide
     },
     // {
     //   path: '/quickstart',

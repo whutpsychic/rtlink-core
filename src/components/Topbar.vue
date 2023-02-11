@@ -4,7 +4,7 @@
       <p># Rtlink-core</p>
     </div>
     <div class="right-content">
-      <el-menu :default-active="activeIndex" class="top-menu-can" mode="horizontal" @select="handleSelect">
+      <el-menu :default-active="'2'" class="top-menu-can" mode="horizontal" @select="handleSelect">
         <el-menu-item index="1">指南</el-menu-item>
         <el-menu-item index="2">文档</el-menu-item>
       </el-menu>
@@ -12,7 +12,7 @@
       <el-icon>
         <Sunny />
       </el-icon>
-      <el-switch v-model="nightMode" active-color="#000" inactive-color="#ddd" />
+      <el-switch :value="nightMode" active-color="#000" inactive-color="#ddd" @change="toggleViewMode" />
       <el-icon>
         <Moon />
       </el-icon>
@@ -35,20 +35,37 @@ export default {
         { label: "简体中文", value: "简体中文" },
         { label: "English", value: "English" }
       ],
-      // ---------- 控制键 ----------
-      nightMode: false,
+
     }
   },
   computed: {
+    // 当前语言
     lang() {
       return this.$store.state.language
-    }
+    },
+    // ---------- 控制键 ----------
+    nightMode() { return this.$store.state.nightMode }
   },
   methods: {
     // 切换语言
     chooseLang(v) {
       this.$store.commit("changeLanguage", v)
     },
+    // 切换黑夜模式
+    toggleViewMode(v){
+      this.$store.commit("toggleViewMode", v)
+    },
+    // 切换标签页
+    handleSelect(v) {
+      // 指南
+      if (v === "1") {
+        this.$router.replace("/guide")
+      }
+      // 文档
+      else {
+        this.$router.replace("/document")
+      }
+    }
   }
 }
 </script>
