@@ -1,8 +1,12 @@
 <template>
-
+  <p>genRandomNum</p>
 </template>
 
-<script setup>
+<script >
+
+export default {
+
+}
 
 </script>
 

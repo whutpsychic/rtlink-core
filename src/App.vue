@@ -2,10 +2,11 @@
   <div class="page-outer-container">
     <div class="page-content-container">
       <Topbar />
-      <RouterView />
+      <div class="main-content">
+        <RouterView />
+      </div>
     </div>
   </div>
-
 </template>
 
 <script>
