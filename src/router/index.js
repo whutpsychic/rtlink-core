@@ -1,10 +1,10 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory, createWebHistory } from 'vue-router'
 import Document from '../pages/Document/main.vue'
 import Guide from '../pages/Guide/main.vue'
 import DeepClone from "../views/DeepClone/main.vue"
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes: [
 
     // 默认展示 Document
