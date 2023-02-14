@@ -4,7 +4,7 @@ import Guide from '../pages/Guide/main.vue'
 import DeepClone from "../views/DeepClone/main.vue"
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(),
   routes: [
 
     // 默认展示 Document
