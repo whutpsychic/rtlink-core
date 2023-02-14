@@ -6,10 +6,11 @@ import DeepClone from "../views/DeepClone/main.vue"
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
+
     // 默认展示 Document
     {
       path: '/',
-      redirect: '/document'
+      redirect: '/document/deepClone'
     },
     // 默认 Document 展示第一个 deepClone
     {
@@ -32,7 +33,7 @@ const router = createRouter({
     // 默认返回
     {
       path: '/:pathMatch(.*)',
-      redirect: '/'
+      redirect: '/document/deepClone'
     },
     // {
     //   path: '/quickstart',

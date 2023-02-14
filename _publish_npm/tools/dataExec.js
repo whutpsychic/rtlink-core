@@ -1,38 +1,9 @@
-const m = {};
-
-function _deepClone(obj) {
-  if (obj instanceof Array) {
-    let newArray = [];
-    for (let i = 0; i < obj.length; i++) {
-      if (typeof obj[i] !== "number" && typeof obj[i] !== "string") {
-        newArray[i] = _deepClone(obj[i]);
-      } else {
-        newArray[i] = obj[i];
-      }
-    }
-    return newArray;
-  }
-  // 认为是对象
-  else {
-    let newObj = {};
-    for (let key in obj) {
-      if (obj.hasOwnProperty(key)) {
-        if (typeof obj[key] !== "number" && typeof obj[key] !== "string") {
-          newObj[key] = _deepClone(obj[key]);
-        } else {
-          newObj[key] = obj[key];
-        }
-      }
-    }
-    return newObj;
-  }
-}
-
-// 深克隆
-m.deepClone = _deepClone;
-
+// --------------------------------------------------------
 // 将数字西方化显示（千位加逗号）
-m.commaedNumber = x => {
+// Author:zbc 
+// Last maintain time: 2023-02-13
+// --------------------------------------------------------
+export const commaedNumber = x => {
   if (typeof x !== "number") {
     throw new Error("commaedNumber函数传参不是一个数字");
   } else {
@@ -82,4 +53,3 @@ m.commaedNumber = x => {
   }
 };
 
-export default m;

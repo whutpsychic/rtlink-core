@@ -1,7 +1,9 @@
-const m = {};
-
+// --------------------------------------------------------
 // 生成一个随机数
-m.genRandomNum = (min, max, fixed = 0) => {
+// Author:zbc 
+// Last maintain time: 2023-02-13
+// --------------------------------------------------------
+export const genRandomNum = (min, max, fixed = 0) => {
 	if (fixed) {
 		return parseFloat((Math.random() * (max - min) + min).toFixed(fixed));
 	} else {
@@ -9,8 +11,12 @@ m.genRandomNum = (min, max, fixed = 0) => {
 	}
 };
 
+// --------------------------------------------------------
 // 生成一组随机数
-m.genRandomNumArr = (min, max, num, fixed = 0) => {
+// Author:zbc 
+// Last maintain time: 2023-02-13
+// --------------------------------------------------------
+export const genRandomNumArr = (min, max, num, fixed = 0) => {
 	const result = [];
 
 	for (let i = 0; i < num; i++) {
@@ -26,9 +32,13 @@ m.genRandomNumArr = (min, max, num, fixed = 0) => {
 	return result;
 };
 
+// --------------------------------------------------------
 // 生成一个以某天为起始，之前n天的字符串数组
 // YYYY-MM-DD
-m.genDatesArr = (date, n) => {
+// Author:zbc 
+// Last maintain time: 2023-02-13
+// --------------------------------------------------------
+export const genDatesArr = (date, n) => {
 	let result = [];
 	// moment
 	if (date._isAMomentObject) {
@@ -48,9 +58,13 @@ m.genDatesArr = (date, n) => {
 	return result;
 };
 
+// --------------------------------------------------------
 // 生成一个以某月为起始，之前n个月的字符串数组
 // YYYY-MM
-m.genMonthsArr = (month, n) => {
+// Author:zbc 
+// Last maintain time: 2023-02-13
+// --------------------------------------------------------
+export const genMonthsArr = (month, n) => {
 	let result = [];
 	// moment
 	if (month._isAMomentObject) {
@@ -68,8 +82,12 @@ m.genMonthsArr = (month, n) => {
 	return result;
 };
 
+// --------------------------------------------------------
 // 生成数字序列
-m.genNumberStream = (start = 1, length = 10, spliter = 1) => {
+// Author:zbc 
+// Last maintain time: 2023-02-13
+// --------------------------------------------------------
+export const genNumberStream = (start = 1, length = 10, spliter = 1) => {
 	let arr = [];
 	for (let i = 0; i < length; i++) {
 		arr.push(start + i * spliter);
@@ -77,16 +95,20 @@ m.genNumberStream = (start = 1, length = 10, spliter = 1) => {
 	return arr;
 };
 
+// --------------------------------------------------------
 // 生成随机编码
-m.genRandomCode = (
+// Author:zbc 
+// Last maintain time: 2023-02-13
+// --------------------------------------------------------
+export const genRandomCode = (
 	length,
 	option = { onlyChar: false, onlysChar: false, withChar: false }
 ) => {
 	const { onlyChar, onlysChar, withChar } = option;
 	// ascii 码表对照数字索引
-	const numList = m.genNumberStream(48, 10);
-	const wordList = m.genNumberStream(65, 26);
-	const wordList2 = m.genNumberStream(97, 26);
+	const numList = genNumberStream(48, 10);
+	const wordList = genNumberStream(65, 26);
+	const wordList2 = genNumberStream(97, 26);
 
 	const targetList = onlyChar
 		? wordList
@@ -104,4 +126,3 @@ m.genRandomCode = (
 	return resStr;
 };
 
-export default m;
