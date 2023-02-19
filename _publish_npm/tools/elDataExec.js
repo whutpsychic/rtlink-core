@@ -30,7 +30,22 @@ export const formatDateTimeParams = (form, { dateStr = [], timeStr = [], fillTim
   return resultFormData
 }
 
+// --------------------------------------------------------
+// 将true/false转换为01的值
+// 输出一个完整的新对象，不改变原对象
+// Author:zbc 
+// Last maintain time: 2023-02-16
+// --------------------------------------------------------
+export const format01Params = (form, propArr, toString) => {
+  // 深克隆
+  let resultFormData = deepClone(form)
 
+  propArr.forEach((item) => {
+    resultFormData[item] = resultFormData[item] ? (toString ? "1" : 1) : (toString ? "0" : 0)
+  })
+
+  return resultFormData
+}
 
 // --------------------------------------------------------
 // 处理掉字段为 cascader 的值为仅输出子节点值
@@ -52,8 +67,11 @@ export const formatCascaderParams = (form, strArr) => {
 }
 
 
-
+// --------------------------------------------------------
 // 整理 cascader 数据（填充时）
+// Author:zbc 
+// Last maintain time: 2023-02-13
+// --------------------------------------------------------
 export const execCascaderData = (data, option = { labelStr: "label", valueStr: "value", childStr: "children" }) => {
   let result = []
   data.forEach((item) => {
@@ -63,7 +81,11 @@ export const execCascaderData = (data, option = { labelStr: "label", valueStr: "
   return result
 }
 
+// --------------------------------------------------------
 // 整理 tree 数据（将一些附带的额外数据全部填进去）
+// Author:zbc 
+// Last maintain time: 2023-02-13
+// --------------------------------------------------------
 export const execTreeData = (data, option = { labelStr: "label", valueStr: "value", childStr: "children" }) => {
   let result = []
   data.forEach((item) => {
@@ -73,7 +95,12 @@ export const execTreeData = (data, option = { labelStr: "label", valueStr: "valu
   return result
 }
 
+// --------------------------------------------------------
 // 将树形数据扁平化平铺成一维数组（包含所有属性）
+// 输出一个完整的新对象，不改变原对象
+// Author:zbc 
+// Last maintain time: 2023-02-13
+// --------------------------------------------------------
 export const tilingTreeData = (dataArr = [], option = { childStr: 'children' }) => {
   // 深克隆
   let _opDataArr = deepClone(dataArr)
@@ -86,7 +113,12 @@ export const tilingTreeData = (dataArr = [], option = { childStr: 'children' }) 
   return result
 }
 
+
+// --------------------------------------------------------
 // 对比字段，从树形数据中找到目标节点id，并将其各层父节点id按照层级顺序从大到小排进一个数组里
+// Author:zbc 
+// Last maintain time: 2023-02-13
+// --------------------------------------------------------
 export const findTreeParentNodeIdAsCascader = (dataArr, id, option = { idStr: 'id', childStr: 'children', parentIdStr: 'parentId' }) => {
   const { idStr, parentIdStr } = option
 

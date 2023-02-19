@@ -5,6 +5,8 @@ import router from './router'
 import store from './store'
 
 import './styles/global.scss'
+import './styles/normal.scss'
+import './styles/night.scss'
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 
 

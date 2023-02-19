@@ -1,5 +1,5 @@
 <template>
-  <el-menu :default-active="menuData.pureFn[0]['nav']" @select="onChangeMenu">
+  <el-menu :default-active="defaulActiveNav || menuData.pureFn[0]['nav']" @select="onChangeMenu">
     <!-- 纯函数组 -->
     <el-menu-item-group class="menu-group">
       <template #title>
@@ -17,10 +17,10 @@
       </template>
       <el-sub-menu v-for="(item, i) in menuData.rtc" :index="`${item['group']}`" class="sub-menu-item">
         <template #title>
-          <p class="submenu-title">{{ item['group']}}</p>
+          <p class="submenu-title">{{ item['group'] }}</p>
         </template>
         <el-menu-item v-for="(fn, j) in item['children']"
-          :index="`${item['group'] === '全局函数' ? 'global' : item['group']}-${fn['nav']}`" class="menu-item-nav">
+          :index="`${fn['nav']}`" class="menu-item-nav">
           {{ fn['name'] }}
           {{ fn['explain'] }}
         </el-menu-item>
@@ -34,7 +34,7 @@
       <el-menu-item v-for="(fn, i) in menuData.elPureFn" :index="fn['nav']" class="menu-item-nav with-subtitle">
         <p class="subtitle">
           <span>{{ fn['name'] }}</span>
-          <span class="detail">{{ fn['explain']}}</span>
+          <span class="detail">{{ fn['explain'] }}</span>
         </p>
       </el-menu-item>
     </el-menu-item-group>
@@ -47,12 +47,12 @@
         <template #title>
           <p class="subtitle">
             <span>{{ fn['name'] }}</span>
-            <span class="detail">{{ fn['explain']}}</span>
+            <span class="detail">{{ fn['explain'] }}</span>
           </p>
         </template>
       </el-menu-item>
     </el-menu-item-group>
-  </el-menu>
+</el-menu>
 </template>
 
 <script>
@@ -61,13 +61,26 @@ import menuData from "@/data/fn-menu.js"
 export default {
   data() {
     return {
-      menuData
+      menuData,
+      defaulActiveNav: null
     }
+  },
+  mounted() {
+    // 匹配刷新时的路由
+    this.matchForRoute()
   },
   methods: {
     onChangeMenu(v) {
       this.$router.push({ path: `/document/${v}` })
-    }
+    },
+    matchForRoute() {
+      const locationStr = window.location.href
+
+      const dataArr = locationStr.split("/")
+      const navStr = dataArr[dataArr.length - 1]
+
+      this.defaulActiveNav = navStr
+    },
   }
 }
 </script>

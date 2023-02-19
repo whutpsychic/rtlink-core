@@ -7,7 +7,7 @@ import { commaedNumber } from "./tools/dataExec.js";
 // ==================== dataGen ====================
 import { genRandomNum, genRandomNumArr, genDatesArr, genMonthsArr, genNumberStream, genRandomCode } from "./tools/dataGen.js";
 // ==================== elDataExec ====================
-import { formatDateTimeParams, formatCascaderParams, execCascaderData, execTreeData, tilingTreeData, findTreeParentNodeIdAsCascader } from "./tools/elDataExec.js";
+import { formatDateTimeParams, formatCascaderParams, execCascaderData, execTreeData, tilingTreeData, findTreeParentNodeIdAsCascader, format01Params } from "./tools/elDataExec.js";
 // ==================== rtDataExec ====================
 import { buildBlankArgs, buildTableQueryParams } from "./tools/rtDataExec.js";
 
@@ -17,6 +17,6 @@ export { rtc };
 
 export { commaedNumber };
 export { genRandomNum, genRandomNumArr, genDatesArr, genMonthsArr, genNumberStream, genRandomCode };
-export { formatDateTimeParams, formatCascaderParams, execCascaderData, execTreeData, tilingTreeData, findTreeParentNodeIdAsCascader };
+export { formatDateTimeParams, formatCascaderParams, execCascaderData, execTreeData, tilingTreeData, findTreeParentNodeIdAsCascader, format01Params };
 export { buildBlankArgs, buildTableQueryParams };
 

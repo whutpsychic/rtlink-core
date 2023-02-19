@@ -1,0 +1,17 @@
+$transitionTime: .3s;
+
+.page-outer-container {
+  transition: $transitionTime;
+  background-color: #fff;
+  color: #111;
+}
+
+// ***************** 顶部条 *****************
+.top-bar-container {
+  transition: $transitionTime;
+  border-bottom-color: #eee;
+
+  p {
+    color: #666;
+  }
+}

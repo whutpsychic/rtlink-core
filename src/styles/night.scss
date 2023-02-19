@@ -1,0 +1,25 @@
+$transitionTime: .3s;
+
+.page-outer-container.nightMode {
+  transition: $transitionTime;
+  background-color: #111;
+  color: #fff;
+}
+
+.nightMode {
+
+  // ***************** 顶部条 *****************
+  .top-bar-container {
+    transition: $transitionTime;
+    border-bottom-color: #233;
+
+    p {
+      color: #fff;
+    }
+  }
+
+
+
+
+
+}

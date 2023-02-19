@@ -12,11 +12,12 @@
       <el-icon>
         <sunny />
       </el-icon>
-      <el-switch :value="nightMode" active-color="#000" inactive-color="#ddd" @change="toggleViewMode" />
+      <el-switch :value="nightMode" active-color="#000" inactive-color="#ddd" @change="toggleViewMode"
+        :border-color="nightMode ? '#aaa' : '#eee'" />
       <el-icon>
         <moon />
       </el-icon>
-      <el-select v-model="lang" class="lang-selector" @change="chooseLang">
+      <el-select v-model="lang" class="lang-selector" @change="chooseLang" disabled>
         <el-option v-for="item in langs" :key="item.value" :label="item.label" :value="item.value" />
       </el-select>
     </div>
@@ -52,7 +53,7 @@ export default {
       this.$store.commit("changeLanguage", v)
     },
     // 切换黑夜模式
-    toggleViewMode(v){
+    toggleViewMode(v) {
       this.$store.commit("toggleViewMode", v)
     },
     // 切换标签页
@@ -75,7 +76,8 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: solid 1px #ddd;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
 
   >div {
     margin: 0 3em;
@@ -83,7 +85,6 @@ export default {
 
   p {
     font-weight: bold;
-    color: #666;
   }
 
   .right-content {
