@@ -4,7 +4,8 @@
       <p># Rtlink-core</p>
     </div>
     <div class="right-content">
-      <el-menu :default-active="'2'" class="top-menu-can" mode="horizontal" @select="handleSelect" :ellipsis="false">
+      <el-menu :default-active="'2'" class="top-menu-can" mode="horizontal" @select="handleSelect" :ellipsis="false"
+        :active-text-color="$store.state.nightMode ? 'orange' : undefined">
         <el-menu-item index="1">指南</el-menu-item>
         <el-menu-item index="2">文档</el-menu-item>
       </el-menu>

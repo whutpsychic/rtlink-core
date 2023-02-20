@@ -18,8 +18,53 @@ $transitionTime: .3s;
     }
   }
 
+  // ***************** 顶部 tab 栏 *****************
+  .el-menu.top-menu-can {
+    transition: $transitionTime;
+    background-color: #233;
+
+    li:hover {
+      background-color: rgba(255, 255, 255, .5);
+      color: #fff;
+    }
+  }
+
+  .el-menu--horizontal>.el-menu-item {
+    color: #fff;
+  }
+
+  .el-menu-item.is-active {
+    background-color: transparent;
+  }
+
+  .el-menu--horizontal>.el-menu-item:not(.is-disabled):focus,
+  .el-menu--horizontal>.el-menu-item:not(.is-disabled):hover {
+    background-color: transparent;
+  }
+
+  // ***************** left-menu *****************
+  .el-menu {
+    transition: $transitionTime;
+    background-color: #222;
+    color: #fff;
+    border-right-color: #333;
+
+    .el-menu-item-group__title,
+    .el-sub-menu__title,
+    .el-menu-item,
+    .subtitle>span.detail {
+      color: #fff;
+    }
+
+    .el-sub-menu__title:hover,
+    .el-menu-item:hover,
+    .subtitle>span.detail:hover {
+      background-color: transparent;
+      color: #1E90FF;
+    }
 
 
+  }
 
 
 }

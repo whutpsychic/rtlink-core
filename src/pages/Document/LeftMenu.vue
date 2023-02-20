@@ -89,7 +89,6 @@ export default {
 .menu-group-title {
   font-size: 20px;
   font-weight: bold;
-  color: #666;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -98,7 +97,6 @@ export default {
   font-size: 15px;
   font-weight: bold;
   text-indent: 2em;
-  color: #666;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -124,10 +122,6 @@ export default {
     height: 50%;
     display: flex;
     align-items: center;
-  }
-
-  >span.detail {
-    color: #aaa;
   }
 }
 </style>
