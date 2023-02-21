@@ -19,8 +19,7 @@
         <template #title>
           <p class="submenu-title">{{ item['group'] }}</p>
         </template>
-        <el-menu-item v-for="(fn, j) in item['children']"
-          :index="`${fn['nav']}`" class="menu-item-nav">
+        <el-menu-item v-for="(fn, j) in item['children']" :index="`${fn['nav']}`" class="menu-item-nav">
           {{ fn['name'] }}
           {{ fn['explain'] }}
         </el-menu-item>
@@ -52,7 +51,7 @@
         </template>
       </el-menu-item>
     </el-menu-item-group>
-</el-menu>
+  </el-menu>
 </template>
 
 <script>
@@ -86,6 +85,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+* {
+  user-select: none;
+}
+
 .menu-group-title {
   font-size: 20px;
   font-weight: bold;

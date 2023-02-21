@@ -1,3 +1,5 @@
+$transitionTime: .3s;
+
 body,
 #app {
   margin: 0;
@@ -17,4 +19,15 @@ body,
 .main-content {
   width: 1280px;
   margin: 0 calc(50vw - 640px);
+}
+
+// ******************************************
+.page-content-container {
+  padding: 24px;
+}
+
+// ***************** code 相关 *****************
+// main color
+.hljs {
+  transition: $transitionTime;
 }

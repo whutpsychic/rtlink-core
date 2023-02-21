@@ -60,11 +60,53 @@ $transitionTime: .3s;
     .el-menu-item:hover,
     .subtitle>span.detail:hover {
       background-color: transparent;
-      color: #1E90FF;
     }
 
+    .el-menu-item:hover,
+    .subtitle>span.detail:hover {
+      color: orange;
+    }
 
+    .el-menu-item.is-active {
+      color: orange;
+    }
   }
 
+  // ***************** code 相关 *****************
+  // main color
+  .hljs {
+    transition: $transitionTime;
+    background-color: #666;
+    color: 	#87CEFA;
+  }
+
+  // import color
+  .hljs-attr,
+  .hljs-doctag,
+  .hljs-keyword,
+  .hljs-meta .hljs-keyword,
+  .hljs-section,
+  .hljs-selector-tag {
+    color: #EE82EE;
+  }
+
+  // string color
+  .hljs-link,
+  .hljs-regexp,
+  .hljs-selector-attr,
+  .hljs-string,
+  .hljs-symbol,
+  .hljs-template-variable,
+  .hljs-variable {
+    color: #FFC0CB;
+  }
+
+  .hljs-built_in, .hljs-literal, .hljs-title{
+    color: orange;
+  }
+
+  .hljs-comment{
+    color: #00FF00;
+  }
 
 }
