@@ -22,9 +22,9 @@ const router = createRouter({
       children: [
         { path: 'deepClone', component: DeepClone },
         { path: 'genRandomNum', component: () => import('../views/genRandomNum/main.vue') },
-        { path: 'genRandomNumArr', component: () => import('../views/genRandomNumArr/main.vue') },
         { path: 'genDatesArr', component: () => import('../views/genDatesArr/main.vue') },
         { path: 'genMonthsArr', component: () => import('../views/genMonthsArr/main.vue') },
+        { path: 'genNumberStream', component: () => import('../views/genNumberStream/main.vue') },
         { path: 'genRandomCode', component: () => import('../views/genRandomCode/main.vue') },
         { path: 'commaedNumber', component: () => import('../views/commaedNumber/main.vue') },
         { path: 'Global.finalDo', component: () => import('../views/Global.finalDo/main.vue') },

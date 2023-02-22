@@ -1,7 +1,7 @@
 <template>
   <div class="page-content-container">
     <h2>deepClone(args) 深克隆</h2>
-    <h4>args = object | array </h4>
+    <h4>args = Object | Array </h4>
     <p>返回一个深克隆的新对象或数组</p>
     <highlightjs language="js" :code="code" />
     <highlightjs language="js" :code="result" />
@@ -29,4 +29,9 @@ console.log(newObj);`,
 
 </script>
 
-<style scoped></style>
+
+<style scoped>
+p {
+  font-size: 15px;
+}
+</style>

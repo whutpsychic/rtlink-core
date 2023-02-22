@@ -5,9 +5,9 @@ const fnMenu = {}
 fnMenu.pureFn = [
   { name: "deepClone", explain: "深克隆", nav: "deepClone" },
   { name: "genRandomNum", explain: "生成随机数", nav: "genRandomNum" },
-  { name: "genRandomNumArr", explain: "生成随机数组", nav: "genRandomNumArr" },
-  { name: "genDatesArr", explain: "生成时间数组", nav: "genDatesArr" },
-  { name: "genMonthsArr", explain: "生成数字序列", nav: "genMonthsArr" },
+  { name: "genDatesArr", explain: "生成日期数组", nav: "genDatesArr" },
+  { name: "genMonthsArr", explain: "生成月份数组", nav: "genMonthsArr" },
+  { name: "genNumberStream", explain: "生成数字序列", nav: "genNumberStream" },
   { name: "genRandomCode", explain: "生成随机编码", nav: "genRandomCode" },
   { name: "commaedNumber", explain: "西化数字", nav: "commaedNumber" },
 ]
