@@ -16,6 +16,13 @@ const store = createStore({
     },
     toggleViewMode(state, mode) {
       state.nightMode = mode
+      let bodyNode = document.getElementsByTagName('body')[0]
+      if (mode) {
+        bodyNode.className = 'nightMode'
+      }
+      else {
+        bodyNode.className = ''
+      }
     }
   }
 })

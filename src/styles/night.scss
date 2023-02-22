@@ -1,12 +1,13 @@
 $transitionTime: .3s;
 
-.page-outer-container.nightMode {
-  transition: $transitionTime;
-  background-color: #111;
-  color: #fff;
-}
-
 .nightMode {
+  background-color: #111;
+
+  .page-outer-container {
+    transition: $transitionTime;
+    background-color: #111;
+    color: #fff;
+  }
 
   // ***************** 顶部条 *****************
   .top-bar-container {
@@ -77,7 +78,7 @@ $transitionTime: .3s;
   .hljs {
     transition: $transitionTime;
     background-color: #666;
-    color: 	#87CEFA;
+    color: #87CEFA;
   }
 
   // import color
@@ -101,11 +102,13 @@ $transitionTime: .3s;
     color: #FFC0CB;
   }
 
-  .hljs-built_in, .hljs-literal, .hljs-title{
+  .hljs-built_in,
+  .hljs-literal,
+  .hljs-title {
     color: orange;
   }
 
-  .hljs-comment{
+  .hljs-comment {
     color: #00FF00;
   }
 

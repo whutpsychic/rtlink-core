@@ -33,7 +33,7 @@
       <el-menu-item v-for="(fn, i) in menuData.elPureFn" :index="fn['nav']" class="menu-item-nav with-subtitle">
         <p class="subtitle">
           <span>{{ fn['name'] }}</span>
-          <span class="detail">{{ fn['explain'] }}</span>
+          <!-- <span class="detail">{{ fn['explain'] }}</span> -->
         </p>
       </el-menu-item>
     </el-menu-item-group>
@@ -46,7 +46,7 @@
         <template #title>
           <p class="subtitle">
             <span>{{ fn['name'] }}</span>
-            <span class="detail">{{ fn['explain'] }}</span>
+            <!-- <span class="detail">{{ fn['explain'] }}</span> -->
           </p>
         </template>
       </el-menu-item>
@@ -113,18 +113,18 @@ export default {
   margin-bottom: 0.5em;
 }
 
-.subtitle {
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-wrap: wrap;
+// .subtitle {
+//   margin: 0;
+//   width: 100%;
+//   height: 100%;
+//   display: flex;
+//   flex-wrap: wrap;
 
-  >span {
-    width: 100%;
-    height: 50%;
-    display: flex;
-    align-items: center;
-  }
-}
+//   >span {
+//     width: 100%;
+//     height: 50%;
+//     display: flex;
+//     align-items: center;
+//   }
+// }
 </style>

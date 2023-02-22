@@ -1,6 +1,6 @@
 <template>
-  <div :class="nightMode ? 'page-outer-container nightMode' : 'page-outer-container'">
-    <div class="page-content-container">
+  <div class="page-outer-container">
+    <div class="main-page-content-container">
       <Topbar />
       <div class="main-content">
         <RouterView />
@@ -15,10 +15,5 @@ import { RouterView } from 'vue-router'
 
 export default {
   components: { Topbar },
-  computed: {
-    nightMode() {
-      return this.$store.state.nightMode
-    }
-  }
 }
 </script>
