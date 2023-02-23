@@ -23,15 +23,15 @@ fnMenu.rtc = [
   {
     group: "String",
     children: [
-      { name: "contains", explain: "包含", nav: "String.contains" },
+      { name: "contains", explain: "检测是否包含子串", nav: "String.contains" },
     ]
   },
   {
     group: "Array",
     children: [
-      { name: "contains", explain: "包含", nav: "Array.contains" },
-      { name: "pickout", explain: "拿出去", nav: "Array.pickout" },
-      { name: "fillWith", explain: "填上", nav: "Array.fillWith" },
+      { name: "contains", explain: "检测是否包含子项", nav: "Array.contains" },
+      { name: "pickout", explain: "将某项摘除", nav: "Array.pickout" },
+      { name: "fillWith", explain: "数组填充", nav: "Array.fillWith" },
       { name: "toDoubleGroups", explain: "分为两组式", nav: "Array.toDoubleGroups" },
     ]
   },
