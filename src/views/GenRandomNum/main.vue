@@ -6,7 +6,7 @@
     <highlightjs language="js" :code="code" />
   </div>
 </template>
-<script >
+<script>
 
 export default {
   data() {

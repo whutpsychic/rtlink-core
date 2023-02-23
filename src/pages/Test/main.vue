@@ -1,10 +1,11 @@
 <template>
   <div class="main-content">
-    <p>Guide</p>
+    <p>Test</p>
   </div>
 </template>
 
 <script>
+
 
 export default {
   mounted() { },

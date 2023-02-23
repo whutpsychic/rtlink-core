@@ -2,6 +2,7 @@ import { createRouter, createWebHashHistory, createWebHistory } from 'vue-router
 import Document from '../pages/Document/main.vue'
 import Guide from '../pages/Guide/main.vue'
 import DeepClone from "../views/deepClone/main.vue"
+import Test from "../views/Test/main.vue"
 
 const router = createRouter({
   history: createWebHashHistory(),
@@ -48,6 +49,12 @@ const router = createRouter({
       path: '/guide',
       name: 'guide',
       component: Guide
+    },
+    // 测试
+    {
+      path: '/test',
+      name: 'test',
+      component: Test
     },
     // // 默认返回
     // {
