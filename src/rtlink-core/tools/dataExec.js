@@ -1,9 +1,12 @@
 // --------------------------------------------------------
 // 将数字西方化显示（千位加逗号）
 // Author:zbc 
-// Last maintain time: 2023-02-13
+// Last maintain time: 2023-02-23
 // --------------------------------------------------------
 export const commaedNumber = x => {
+  // 分割长度
+  const splitLength = 3
+
   if (typeof x !== "number") {
     throw new Error("commaedNumber函数传参不是一个数字");
   } else {
@@ -27,9 +30,9 @@ export const commaedNumber = x => {
       let rArr = strArr.reverse();
       const L = strArr.length;
       let resArr = [];
-      for (let i = 0; i < L; i++) {
+      for (let i = splitLength + 1; i < L; i++) {
         resArr.push(rArr[i]);
-        if (!(i % 2) && i !== 0) {
+        if (!(i % splitLength)) {
           if (rArr[i + 1]) resArr.push(",");
         }
       }
@@ -41,9 +44,9 @@ export const commaedNumber = x => {
       let rArr = strArr.reverse();
       const L = strArr.length;
       let resArr = [];
-      for (let i = 0; i < L; i++) {
+      for (let i = splitLength + 1; i < L; i++) {
         resArr.push(rArr[i]);
-        if (!(i % 2) && i !== 0) {
+        if (!(i % splitLength)) {
           if (rArr[i + 1]) resArr.push(",");
         }
       }

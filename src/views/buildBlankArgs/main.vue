@@ -3,6 +3,7 @@
     <h2>buildBlankArgs() 构造空的表格查询参数</h2>
     <p>返回一个固定对象</p>
     <highlightjs language="js" :code="code" />
+    <p> ************** 运行结果 ************** </p>
     <highlightjs language="js" :code="result" />
   </div>
 </template>
@@ -18,16 +19,14 @@ const obj = buildBlankArgs();
 
 console.log(obj);`,
       result:
-        `// 运行结果
-{
+        `{
     querys: [],
     "pageBean": {
       "page": 1,
       "pageSize": 9999,
       "showTotal": true
     }
-}
-`
+}`
     }
   }
 }

@@ -5,6 +5,7 @@
     <h4>baseParams = { querys = [], pageBean = {}, sorter = {} }, extraConditions = {}</h4>
     <p>返回一个固定对象。包含查询时的必要参数，可添加额外的传参。</p>
     <highlightjs language="js" :code="code" />
+    <p> ************** 运行结果 ************** </p>
     <highlightjs language="js" :code="result" />
   </div>
 </template>
@@ -14,22 +15,57 @@ export default {
   data() {
     return {
       code:
-        `import { execTableQueryParams } from 'rtlink-core';
+        `import moment from "moment";
+import { buildTableQueryParams } from '@/rtlink-core';
 
-const obj = execTableQueryParams();
+const condition = buildTableQueryParams({
+  pageBean: {
+    page: 1,
+    pageSize: 10,
+    total: 0
+  }
+}, {
+  treeIds: { operation: "EQUAL", relation: "AND", value: "treeIds" },
+  cycleType: { operation: "EQUAL", relation: "AND", value: "cycleType" },
+  start: { operation: "EQUAL", relation: "AND", value: moment().format("YYYY-MM-DD 00:00:00") },
+  end: { operation: "EQUAL", relation: "AND", value: moment().format("YYYY-MM-DD 23:59:59") },
+})
 
-console.log(obj);`,
+console.log(condition)`,
       result:
-        `// 运行结果
-{
-    querys: [],
-    "pageBean": {
-      "page": 1,
-      "pageSize": 9999,
-      "showTotal": true
+        `{
+  pageBean: {
+    page: 1,
+    pageSize: 10,
+    total: 0
+  },
+  querys: [
+    {
+      property: 'treeIds', 
+      value: 'treeIds', 
+      operation: 'EQUAL', 
+      relation: 'AND'
+    },
+    {
+      property: 'cycleType', 
+      value: 'cycleType', 
+      operation: 'EQUAL', 
+      relation: 'AND'
+    },
+    {
+      property: 'start', 
+      value: '2023-02-23 00: 00: 00', 
+      operation: 'EQUAL', 
+      relation: 'AND'
+    },
+    {
+      property: 'end', 
+      value: '2023-02-23 23: 59: 59', 
+      operation: 'EQUAL', 
+      relation: 'AND'
     }
-}
-`
+  ]
+}`
     }
   }
 }

@@ -1,10 +1,15 @@
 // --------------------------------------------------------
 // 深克隆
 // Author:zbc 
-// Last maintain time: 2023-02-13
+// Last maintain time: 2023-02-23
 // --------------------------------------------------------
 export function deepClone(obj) {
-  if (obj instanceof Array) {
+  // moment
+  if (obj._isAMomentObject) {
+    return obj.clone()
+  }
+  // 数组
+  if (typeof (obj) === 'array') {
     let newArray = [];
     for (let i = 0; i < obj.length; i++) {
       if (typeof obj[i] !== "number" && typeof obj[i] !== "string") {
@@ -15,8 +20,8 @@ export function deepClone(obj) {
     }
     return newArray;
   }
-  // 认为是对象
-  else {
+  // 对象
+  else if (typeof (obj) === 'object') {
     let newObj = {};
     for (let key in obj) {
       if (obj.hasOwnProperty(key)) {
@@ -28,6 +33,10 @@ export function deepClone(obj) {
       }
     }
     return newObj;
+  }
+  // 其他浅对象
+  else {
+    return obj
   }
 }
 

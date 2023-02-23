@@ -2,7 +2,7 @@ import { createRouter, createWebHashHistory, createWebHistory } from 'vue-router
 import Document from '../pages/Document/main.vue'
 import Guide from '../pages/Guide/main.vue'
 import DeepClone from "../views/deepClone/main.vue"
-import Test from "../views/Test/main.vue"
+import Test from "../pages/Test/main.vue"
 
 const router = createRouter({
   history: createWebHashHistory(),

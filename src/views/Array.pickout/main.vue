@@ -4,6 +4,7 @@
     <h4>obj = anyType </h4>
     <p>没有返回值，且改变原数组。</p>
     <highlightjs language="js" :code="code" />
+    <p> ************** 运行结果 ************** </p>
     <highlightjs language="js" :code="result" />
   </div>
 </template>
@@ -18,8 +19,7 @@ export default {
 array.pickout(2)
 
 console.log(array)`,
-      result: `// 运行结果
-[1, 3, 4, 5]`
+      result: `[1, 3, 4, 5]`
     }
   }
 }

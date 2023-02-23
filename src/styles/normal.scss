@@ -32,3 +32,12 @@ $transitionTime: .3s;
     color: #666;
   }
 }
+
+// ***************** warning *****************
+.warning {
+  transition: $transitionTime;
+  background-color: #FFE4B5;
+  border: solid 1px orange;
+  padding: 1em;
+  border-radius: 0.5em;
+}

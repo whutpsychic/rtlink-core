@@ -4,6 +4,7 @@
     <h4>args = Object | Array </h4>
     <p>返回一个深克隆的新对象或数组</p>
     <highlightjs language="js" :code="code" />
+    <p> ************** 运行结果 ************** </p>
     <highlightjs language="js" :code="result" />
   </div>
 </template>
@@ -13,15 +14,31 @@ export default {
   data() {
     return {
       code: 
-`import { deepClone } from 'rtlink-core';
+`import { deepClone } from "@/rtlink-core"
 
-const obj = { name: "name1", value: "value1", description: "description1" };
-const newObj = deepClone(obj);
+const data = {
+  "name": 1,
+  "value": 12,
+  "children": [
+    3,
+    5,
+    8
+  ]
+}
 
-console.log(newObj);`,
+const newData = deepClone(data)
+
+console.log(newData)`,
       result: 
-`// 运行结果
-{ name: "name1", value: "value1", description: "description1" }
+`{
+  "name": 1,
+  "value": 12,
+  "children": [
+    3,
+    5,
+    8
+  ]
+}
 `
     }
   }

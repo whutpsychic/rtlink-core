@@ -32,8 +32,9 @@ rtc.init = () => {
   // 判断数组中是否包含某一项(浅比较)
   Array.prototype.contains = function (x) {
     for (let i of this) {
-      if (i == x) return true
+      if (i === x) return true
     }
+    return false
   }
   // 扩展 Array 方法
   // *修改原数组
@@ -49,16 +50,15 @@ rtc.init = () => {
   // 扩展 Array 方法
   // 给当前数组用x填满至长度n
   Array.prototype.fillWith = function (x, n) {
-    let L = this.length
-    let result = []
+    const L = this.length
     for (let i = 0; i < n; i++) {
       if (i < L) {
-        result.push(this[i])
+        continue
       } else {
-        result.push(x)
+        this.push(x)
       }
     }
-    return result
+    return this
   }
 
   // 扩展 Array 方法

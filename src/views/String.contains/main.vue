@@ -4,6 +4,7 @@
     <h4>substr = String </h4>
     <p>返回布尔值 true/false，检测某个字符串中是否包含子串 substr。</p>
     <highlightjs language="js" :code="code" />
+    <p> ************** 运行结果 ************** </p>
     <highlightjs language="js" :code="result" />
   </div>
 </template>
@@ -18,8 +19,7 @@ export default {
 const gotHello = str.contains("hello")
 
 console.log(gotHello)`,
-      result: `// 运行结果
-true`
+      result: `true`
     }
   }
 }

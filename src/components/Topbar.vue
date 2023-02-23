@@ -1,6 +1,6 @@
 <template>
   <div class="top-bar-container">
-    <div class="logo-part">
+    <div class="logo-part" @dblclick="onDoubleClick">
       <p># Rtlink-core</p>
     </div>
     <div class="right-content">
@@ -67,7 +67,10 @@ export default {
       else {
         this.$router.replace("/document")
       }
-    }
+    },
+    onDoubleClick() {
+      this.$router.push("/test")
+    },
   }
 }
 </script>
@@ -79,6 +82,7 @@ export default {
   align-items: center;
   border-bottom-style: solid;
   border-bottom-width: 1px;
+  user-select: none;
 
   >div {
     margin: 0 3em;

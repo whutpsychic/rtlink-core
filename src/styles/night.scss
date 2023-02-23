@@ -112,4 +112,11 @@ $transitionTime: .3s;
     color: #00FF00;
   }
 
+  // ***************** warning *****************
+  .warning {
+    transition: $transitionTime;
+    background-color: #FA8072;
+    border-color: red;
+  }
+
 }

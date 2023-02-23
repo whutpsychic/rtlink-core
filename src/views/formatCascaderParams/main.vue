@@ -4,6 +4,7 @@
     <h4>{{ 'obj = Object, strArr = Array<String>' }}</h4>
     <p>返回一个深克隆的新对象。obj 是输入对象，strArr 是要处理的字段名。常用于整理表单数据格式。</p>
     <highlightjs language="js" :code="code" />
+    <p> ************** 运行结果 ************** </p>
     <highlightjs language="js" :code="result" />
   </div>
 </template>
@@ -20,9 +21,7 @@ const newObj = formatCascaderParams(formObj, ['cas']);
 
 console.log(newObj);`,
       result:
-        `// 运行结果
-{ name: "name1", value: "value1", cas: 4 }
-`
+        `{ name: "name1", value: "value1", cas: 4 }`
     }
   }
 }
