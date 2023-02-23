@@ -1,5 +1,6 @@
 <template>
   <div class="page-content-container">
+    <h2>{{ 'String' }}</h2>
     <h2>commaedNumber(number) 西化数字显示</h2>
     <h4>number = Number </h4>
     <p>返回一个千位用逗号隔开的数字符串</p>
@@ -14,7 +15,7 @@ export default {
   data() {
     return {
       code:
-        `import { commaedNumber } from '@/rtlink-core';
+        `import { commaedNumber } from "rtlink-core";
 
 const result1 = commaedNumber(237589283076589);
 const result2 = commaedNumber(112354237028305.78);

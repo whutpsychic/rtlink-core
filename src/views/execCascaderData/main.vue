@@ -1,5 +1,6 @@
 <template>
   <div class="page-content-container">
+    <h2>{{ 'Array' }}</h2>
     <h2>execCascaderData(data, option) 整理 cascader 数据</h2>
     <h4>data, option = { labelStr: "label", valueStr: "value", childStr: "children" }</h4>
     <p>返回一个经过整理后的数组。将树形数据整理为符合 element-ui 中 {{ ' < Cascader /> ' }} 类型的最简数据。data 是输入对象，option 是配置项。填充数据时常用。
@@ -16,7 +17,7 @@ export default {
   data() {
     return {
       code:
-        `import { execCascaderData } from 'rtlink-core';
+        `import { execCascaderData } from "rtlink-core";
 
 const dataArr = [{ name: "name1", value: "value1", options: [{ name: "name2", value: "value2" }] }];
 const newData = execCascaderData(dataArr, { labelStr: 'name', childStr: "options" });

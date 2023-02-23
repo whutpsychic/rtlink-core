@@ -112,6 +112,10 @@ $transitionTime: .3s;
     color: #00FF00;
   }
 
+  .hljs-name, .hljs-number, .hljs-quote, .hljs-selector-id, .hljs-template-tag, .hljs-type{
+    color: #E6E6FA;
+  }
+
   // ***************** warning *****************
   .warning {
     transition: $transitionTime;

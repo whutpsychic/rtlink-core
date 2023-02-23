@@ -1,5 +1,6 @@
 <template>
   <div class="page-content-container">
+    <h2>{{ 'Array<Number>' }}</h2>
     <h2>genNumberStream(start, length, spliter) 生成数字序列</h2>
     <h4>start = 1, length = 7, spliter = 1</h4>
     <p>默认生成一个 1-7 的数组。start 是起始数字，length 表示生成的数组的长度，spliter 表示数列等差值</p>
@@ -14,7 +15,7 @@ export default {
   data() {
     return {
       code:
-        `import { genNumberStream } from '@/rtlink-core';        
+        `import { genNumberStream } from "rtlink-core";        
 
 const arr1 = genNumberStream();
 const arr2 = genNumberStream(2, 5, 3);

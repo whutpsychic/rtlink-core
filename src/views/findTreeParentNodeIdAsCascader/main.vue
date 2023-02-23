@@ -1,5 +1,6 @@
 <template>
   <div class="page-content-container">
+    <h2>{{ 'Array' }}</h2>
     <h2>findTreeParentNodeIdAsCascader(data, id, option) 整理树形控制键数据</h2>
     <h4>data, id, option = { idStr: 'id', childStr: 'children', parentIdStr: 'parentId' }</h4>
     <p>返回一个经过整理后的一维数组。对比字段，从树形数据中找到目标节点id，并将其各层父节点id按照层级顺序从大到小排进一个数组里，使其可以直接锚定 cascader 中的数据位置。</p>
@@ -14,7 +15,7 @@ export default {
   data() {
     return {
       code:
-        `import { findTreeParentNodeIdAsCascader } from '@/rtlink-core';
+        `import { findTreeParentNodeIdAsCascader } from "rtlink-core";
 
 const dataArr = [
   {

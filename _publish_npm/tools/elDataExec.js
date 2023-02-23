@@ -6,25 +6,19 @@ import * as _helper from "./_helper.js"
 // 处理掉字段为时间的值
 // 输出一个完整的新对象，不改变原对象
 // Author:zbc 
-// Last maintain time: 2023-02-13
+// Last maintain time: 2023-02-23
 // --------------------------------------------------------
-export const formatDateTimeParams = (form, { dateStr = [], timeStr = [], fillTimeStr = [] }) => {
+export const formatDateTimeParams = (form = {}, strArr = [], formatter = "YYYY-MM-DD") => {
   // 深克隆
   let resultFormData = deepClone(form)
 
-  // 转换所有 YYYY-MM-DD 格式数据
-  dateStr.map((key) => {
-    resultFormData[key] = moment(resultFormData[key]).format("YYYY-MM-DD")
-  })
-
-  // 处理所有 YYYY-MM-DD hh:mm:ss 格式数据
-  timeStr.map((key) => {
-    resultFormData[key] = moment(resultFormData[key]).format("YYYY-MM-DD hh:mm:ss")
-  })
-
-  // 处理所有 YYYY-MM-DD 00:00:00 格式数据（应后台需求补填数据）
-  fillTimeStr.map((key) => {
-    resultFormData[key] = moment(resultFormData[key]).format("YYYY-MM-DD 00:00:00")
+  // 转换所有格式数据
+  strArr.map((key) => {
+    if (resultFormData[key]._isAMomentObject) {
+      resultFormData[key] = resultFormData[key].format(formatter)
+    } else {
+      resultFormData[key] = moment(resultFormData[key]).format(formatter)
+    }
   })
 
   return resultFormData
@@ -34,14 +28,19 @@ export const formatDateTimeParams = (form, { dateStr = [], timeStr = [], fillTim
 // 将true/false转换为01的值
 // 输出一个完整的新对象，不改变原对象
 // Author:zbc 
-// Last maintain time: 2023-02-16
+// Last maintain time: 2023-02-23
 // --------------------------------------------------------
 export const format01Params = (form, propArr, toString) => {
   // 深克隆
   let resultFormData = deepClone(form)
 
   propArr.forEach((item) => {
-    resultFormData[item] = resultFormData[item] ? (toString ? "1" : 1) : (toString ? "0" : 0)
+    if ((!resultFormData[item]) || (resultFormData[item] === "false")) {
+      resultFormData[item] = toString ? "0" : 0
+    }
+    else {
+      resultFormData[item] = toString ? "1" : 1
+    }
   })
 
   return resultFormData

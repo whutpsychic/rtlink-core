@@ -1,5 +1,6 @@
 <template>
   <div class="page-content-container">
+    <h2>{{ 'Array<?>' }}</h2>
     <h2>Array.prototype.toDoubleGroups() 划分数组中的项</h2>
     <p>返回一个新的二维数组。将数组中的项按顺序划分为两组。</p>
     <highlightjs language="js" :code="code" />

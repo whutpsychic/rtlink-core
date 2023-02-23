@@ -1,5 +1,6 @@
 <template>
   <div class="page-content-container">
+    <h2>{{ 'Object' }}</h2>
     <h2>execTableQueryParams(baseParams, extraConditions) 构造表格查询条件的传参</h2>
     <h4>baseParams = Object, extraConditions = Object</h4>
     <h4>baseParams = { querys = [], pageBean = {}, sorter = {} }, extraConditions = {}</h4>
@@ -16,7 +17,7 @@ export default {
     return {
       code:
         `import moment from "moment";
-import { buildTableQueryParams } from '@/rtlink-core';
+import { buildTableQueryParams } from "rtlink-core";
 
 const condition = buildTableQueryParams({
   pageBean: {

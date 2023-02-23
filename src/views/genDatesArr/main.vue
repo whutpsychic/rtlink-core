@@ -1,5 +1,6 @@
 <template>
   <div class="page-content-container">
+    <h2>{{ 'Array<String>' }}</h2>
     <h2>genDatesArr(date, num) 生成日期数组</h2>
     <h4>date = moment(), num = 7</h4>
     <p>默认生成一个从今天起向前推7天的日期字符串数组。date 是一个 moment 类型的数据，num 表示向前推算多少天。</p>
@@ -15,7 +16,7 @@ export default {
     return {
       code:
         `import moment from "moment"
-import { genDatesArr } from "@/rtlink-core"
+import { genDatesArr } from "rtlink-core"
 
 const arr1 = genDatesArr();
 const arr2 = genDatesArr(moment('2023-01-01'), 12);

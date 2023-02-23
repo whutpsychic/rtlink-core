@@ -1,7 +1,7 @@
 const config = {}
 
 // 版本
-config.version = "0.2.9"
+config.version = "0.3.0"
 
 // 语言
 

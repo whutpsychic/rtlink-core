@@ -1,5 +1,6 @@
 <template>
   <div class="page-content-container">
+    <h2>{{ 'void' }}</h2>
     <h2>Array.prototype.pickout(obj) 将某项从数组中摘除（浅比较）</h2>
     <h4>obj = anyType </h4>
     <p>没有返回值，且改变原数组。</p>

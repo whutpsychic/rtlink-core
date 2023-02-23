@@ -1,5 +1,6 @@
 <template>
   <div class="page-content-container">
+    <h2>{{ 'Array' }}</h2>
     <h2>tilingTreeData(data, option) 整理树形数据</h2>
     <h4>data, option = { childStr: "children" }</h4>
     <p>返回一个经过整理后的一维数组。将树形数据平铺后放在同一个数组中。data 是输入对象，option 是配置项。</p>
@@ -14,7 +15,7 @@ export default {
   data() {
     return {
       code:
-        `import { tilingTreeData } from '@/rtlink-core';
+        `import { tilingTreeData } from "rtlink-core";
 
 const dataArr = [
   {

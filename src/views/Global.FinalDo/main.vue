@@ -1,5 +1,6 @@
 <template>
   <div class="page-content-container">
+    <h2>{{ 'void' }}</h2>
     <h2>finalDo(fn) 最后执行</h2>
     <h4>fn = Function </h4>
     <p>在 js 线程中，最后执行 fn 函数。不返回任何结果。</p>

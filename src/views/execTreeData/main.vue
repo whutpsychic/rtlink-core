@@ -1,5 +1,6 @@
 <template>
   <div class="page-content-container">
+    <h2>{{ 'Array' }}</h2>
     <h2>execTreeData(data, option) 整理树形数据</h2>
     <h4>data, option = { labelStr: "label", valueStr: "value", childStr: "children" }</h4>
     <p>返回一个经过整理后的数组。将树形数据整理为符合 element-ui 中 {{ '<tree/>' }} 类型的完整数据。data 是输入对象，option 是配置项。填充数据时常用。</p>
@@ -15,7 +16,7 @@ export default {
   data() {
     return {
       code:
-        `import { execTreeData } from 'rtlink-core';
+        `import { execTreeData } from "rtlink-core";
 
 const dataArr = [{ name: "name1", value: "value1", options: [{ name: "name2", value: "value2" }] }];
 const newData = execTreeData(dataArr, { labelStr: 'name', childStr: "options" });

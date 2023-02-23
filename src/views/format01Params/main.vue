@@ -1,5 +1,6 @@
 <template>
   <div class="page-content-container">
+    <h2>{{ 'Object' }}</h2>
     <h2>format01Params(obj, strArr, toString) 格式化对象中值为 cascader 类型的数据</h2>
     <h4>{{ 'obj = Object, strArr = Array<String>, toString = Boolean' }}</h4>
     <p>返回一个深克隆的新对象。obj 是输入对象，strArr 是要处理的字段名。toString 为 true 时输出字符串 '0'/'1'。常用于整理表单数据格式。</p>
@@ -14,7 +15,7 @@ export default {
   data() {
     return {
       code:
-        `import { format01Params } from '@/rtlink-core';
+        `import { format01Params } from "rtlink-core";
 
 const formObj = { name: "name1", value: "value1", cas: true };
 const formObj2 = { name: "name2", value: "value2", cas: false };

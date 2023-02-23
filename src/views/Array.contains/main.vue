@@ -1,5 +1,6 @@
 <template>
   <div class="page-content-container">
+    <h2>{{ 'Boolean' }}</h2>
     <h2>Array.prototype.contains(obj) 检测是否包含子项（浅比较）</h2>
     <h4>obj = anyType </h4>
     <p>返回布尔值 true/false，检测某个数组中是否包含子项 obj。</p>

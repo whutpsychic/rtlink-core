@@ -1,5 +1,6 @@
 <template>
   <div class="page-content-container">
+    <h2>{{ 'Object' }}</h2>
     <h2>buildBlankArgs() 构造空的表格查询参数</h2>
     <p>返回一个固定对象</p>
     <highlightjs language="js" :code="code" />
@@ -13,7 +14,7 @@ export default {
   data() {
     return {
       code:
-        `import { buildBlankArgs } from 'rtlink-core';
+        `import { buildBlankArgs } from "rtlink-core";
 
 const obj = buildBlankArgs();
 

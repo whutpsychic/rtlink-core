@@ -1,5 +1,6 @@
 <template>
   <div class="page-content-container">
+    <h2>{{ 'void' }}</h2>
     <h2>Array.prototype.fillWith(obj, n) 填充数组</h2>
     <h4>obj = anyType, n = Number </h4>
     <p>没有返回值，且改变原数组。将某数组以 obj 填满至长度为 n。</p>

@@ -1,5 +1,6 @@
 <template>
   <div class="page-content-container">
+    <h2>{{ 'Array<String>' }}</h2>
     <h2>genMonthsArr(month, num) 生成月份数组</h2>
     <h4>month = moment(), num = 7</h4>
     <p>默认生成一个从本月起向前推7天的月份字符串数组。month 是一个 moment 类型的数据，num 表示向前推算多少个月。</p>
@@ -15,7 +16,7 @@ export default {
     return {
       code:
         `import moment from "moment"
-import { genMonthsArr } from "@/rtlink-core"
+import { genMonthsArr } from "rtlink-core"
 
 const arr1 = genMonthsArr();
 const arr2 = genMonthsArr(moment('2023-01'), 12);
