@@ -1,4 +1,4 @@
-import{_ as a,r as c,o as l,c as _,a as r,p as d,b as m,d as e,t as i}from"./index-66c8d3fa.js";const p={data(){return{code:`import moment from "moment"
+import{_ as a,r as c,o as l,c as _,a as r,p as d,b as m,d as e,t as i}from"./index-1fc7690c.js";const p={data(){return{code:`import moment from "moment"
 import { genDatesArr } from "rtlink-core"
 
 const arr1 = genDatesArr();

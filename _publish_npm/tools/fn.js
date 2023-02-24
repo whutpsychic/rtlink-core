@@ -1,7 +1,7 @@
 // --------------------------------------------------------
 // 深克隆
 // Author:zbc 
-// Last maintain time: 2023-02-23
+// Last maintain time: 2023-02-24
 // --------------------------------------------------------
 export function deepClone(obj) {
   // moment
@@ -9,7 +9,7 @@ export function deepClone(obj) {
     return obj.clone()
   }
   // 数组
-  if (typeof (obj) === 'array') {
+  if (obj instanceof Array) {
     let newArray = [];
     for (let i = 0; i < obj.length; i++) {
       if (typeof obj[i] !== "number" && typeof obj[i] !== "string") {
@@ -21,7 +21,7 @@ export function deepClone(obj) {
     return newArray;
   }
   // 对象
-  else if (typeof (obj) === 'object') {
+  else if (Object.prototype.toString.call(obj) === '[object Object]') {
     let newObj = {};
     for (let key in obj) {
       if (obj.hasOwnProperty(key)) {

@@ -1,4 +1,4 @@
-import{_ as r,r as l,o as m,c as u,a as t,p as _,b as d,d as e,t as c}from"./index-66c8d3fa.js";const i={data(){return{code:`import { format01Params } from "rtlink-core";
+import{_ as r,r as l,o as m,c as u,a as t,p as _,b as d,d as e,t as c}from"./index-1fc7690c.js";const i={data(){return{code:`import { format01Params } from "rtlink-core";
 
 const formObj = { name: "name1", value: "value1", cas: true };
 const formObj2 = { name: "name2", value: "value2", cas: false };

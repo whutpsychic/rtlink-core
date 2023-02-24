@@ -1,4 +1,4 @@
-import{_ as r,r as l,o as _,c as d,a as c,p as i,b as p,d as e,t as n}from"./index-66c8d3fa.js";const u={data(){return{code:`import { formatCascaderParams } from "rtlink-core";
+import{_ as r,r as l,o as _,c as d,a as c,p as i,b as p,d as e,t as n}from"./index-1fc7690c.js";const u={data(){return{code:`import { formatCascaderParams } from "rtlink-core";
 
 const formObj = { name: "name1", value: "value1", cas: [1, 2, 3, 4] };
 const newObj = formatCascaderParams(formObj, ['cas']);
