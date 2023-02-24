@@ -51,7 +51,7 @@ fnMenu.elPureFn = [
 // rtlink-ui 框架下通用纯函数
 fnMenu.rtPureFn = [
   { name: "buildBlankArgs", explain: "构造表格查询空传参", nav: "buildBlankArgs" },
-  { name: "buildTableQueryParams", explain: "构造表格查询传参", nav: "execTableQueryParams" },
+  { name: "buildTableQueryParams", explain: "构造表格查询传参", nav: "buildTableQueryParams" },
 ]
 
 

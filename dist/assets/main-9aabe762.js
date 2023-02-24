@@ -1,4 +1,4 @@
-import{_ as a,r as d,o as m,c as u,a as c,p as l,b as r,d as e,t as _}from"./index-995b63a6.js";const i={data(){return{code:`import { genRandomNumber } from "rtlink-core"
+import{_ as a,r as d,o as m,c as u,a as c,p as l,b as r,d as e,t as _}from"./index-66c8d3fa.js";const i={data(){return{code:`import { genRandomNumber } from "rtlink-core"
 
 const num1 = genRandomNumber();
 const num2 = genRandomNumber(0, 1000, 0, 5);

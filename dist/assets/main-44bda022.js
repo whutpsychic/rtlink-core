@@ -1,4 +1,4 @@
-import{_ as a,r as l,o as _,c as r,a as n,p as d,b as i,d as o,t as p}from"./index-995b63a6.js";const h={data(){return{code:`const array = [1, 2, 3, 4, 5]
+import{_ as a,r as l,o as _,c as r,a as n,p as d,b as i,d as o,t as p}from"./index-66c8d3fa.js";const h={data(){return{code:`const array = [1, 2, 3, 4, 5]
 
 array.fillWith(0, 8)
 

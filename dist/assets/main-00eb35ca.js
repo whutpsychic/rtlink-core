@@ -1,4 +1,4 @@
-import{_ as a,r,o as _,c as l,a as c,p as d,b as p,d as e,t as u}from"./index-995b63a6.js";const i={data(){return{code:`const array = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+import{_ as a,r,o as _,c as l,a as c,p as d,b as p,d as e,t as u}from"./index-66c8d3fa.js";const i={data(){return{code:`const array = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 const newArr = array.toDoubleGroups()
 
