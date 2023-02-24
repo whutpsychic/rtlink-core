@@ -1,4 +1,4 @@
-import{_ as s,r,o as l,c,a as n,p as i,b as u,d as e,t as f}from"./index-9e61d613.js";const b={data(){return{code:`import moment from "moment";
+import{_ as s,r,o as l,c,a as n,p as i,b as u,d as e,t as f}from"./index-f474f120.js";const b={data(){return{code:`import moment from "moment";
 import { formatDateTimeParams } from "rtlink-core";
 
 const formObj = { name: "name1", value: "value1", time: new Date() };
