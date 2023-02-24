@@ -1,7 +1,7 @@
 <template>
   <div class="page-content-container">
     <h2>{{ 'Object' }}</h2>
-    <h2>execTableQueryParams(baseParams, extraConditions) 构造表格查询条件的传参</h2>
+    <h2>buildTableQueryParams(baseParams, extraConditions) 构造表格查询条件的传参</h2>
     <h4>baseParams = Object, extraConditions = Object</h4>
     <h4>baseParams = { querys = [], pageBean = {}, sorter = {} }, extraConditions = {}</h4>
     <p>返回一个固定对象。包含查询时的必要参数，可添加额外的传参。</p>

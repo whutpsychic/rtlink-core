@@ -42,7 +42,7 @@ const router = createRouter({
         { path: 'findTreeParentNodeIdAsCascader', component: () => import('../views/findTreeParentNodeIdAsCascader/main.vue') },
         { path: 'format01Params', component: () => import('../views/format01Params/main.vue') },
         { path: 'buildBlankArgs', component: () => import('../views/buildBlankArgs/main.vue') },
-        { path: 'execTableQueryParams', component: () => import('../views/execTableQueryParams/main.vue') },
+        { path: 'buildTableQueryParams', component: () => import('../views/buildTableQueryParams/main.vue') },
       ]
     },
     {
