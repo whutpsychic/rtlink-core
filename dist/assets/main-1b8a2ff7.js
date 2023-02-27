@@ -1,4 +1,4 @@
-import{_ as l,r,o as a,c as _,a as n,p as u,b as d,d as e,t as m}from"./index-1fc7690c.js";const i={data(){return{code:`import { commaedNumber } from "rtlink-core";
+import{_ as l,r,o as a,c as _,a as n,p as u,b as d,d as e,t as m}from"./index-1a03585d.js";const i={data(){return{code:`import { commaedNumber } from "rtlink-core";
 
 const result1 = commaedNumber(237589283076589);
 const result2 = commaedNumber(112354237028305.78);

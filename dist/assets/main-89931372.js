@@ -1,4 +1,4 @@
-import{_ as d,r as a,o as l,c as r,a as s,p as _,b as p,d as o,t as h}from"./index-1fc7690c.js";const i={data(){return{code:`import { genRandomCode } from "rtlink-core";
+import{_ as d,r as a,o as l,c as r,a as s,p as _,b as p,d as o,t as h}from"./index-1a03585d.js";const i={data(){return{code:`import { genRandomCode } from "rtlink-core";
 
 const code1 = genRandomCode();
 const code2 = genRandomCode("number", 8);

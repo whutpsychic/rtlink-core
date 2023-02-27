@@ -1,4 +1,4 @@
-import{_ as a,r as c,o as l,c as _,a as r,p as d,b as p,d as e,t as i}from"./index-1fc7690c.js";const u={data(){return{code:`import { genNumberStream } from "rtlink-core";        
+import{_ as a,r as c,o as l,c as _,a as r,p as d,b as p,d as e,t as i}from"./index-1a03585d.js";const u={data(){return{code:`import { genNumberStream } from "rtlink-core";        
 
 const arr1 = genNumberStream();
 const arr2 = genNumberStream(2, 5, 3);

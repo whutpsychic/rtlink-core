@@ -1,4 +1,4 @@
-import{_ as l,r as a,o as _,c as r,a as c,p as d,b as i,d as e,t as p}from"./index-1fc7690c.js";const u={data(){return{code:`const str = "hello babe!"
+import{_ as l,r as a,o as _,c as r,a as c,p as d,b as i,d as e,t as p}from"./index-1a03585d.js";const u={data(){return{code:`const str = "hello babe!"
 
 const gotHello = str.contains("hello")
 

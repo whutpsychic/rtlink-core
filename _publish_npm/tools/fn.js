@@ -1,11 +1,11 @@
 // --------------------------------------------------------
 // 深克隆
 // Author:zbc 
-// Last maintain time: 2023-02-24
+// Last maintain time: 2023-02-27
 // --------------------------------------------------------
 export function deepClone(obj) {
   // moment
-  if (obj._isAMomentObject) {
+  if (obj && obj._isAMomentObject) {
     return obj.clone()
   }
   // 数组

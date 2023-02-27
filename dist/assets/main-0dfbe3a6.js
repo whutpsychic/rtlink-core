@@ -1,4 +1,4 @@
-import{_ as c,r as _,o as d,c as l,a as n,p as r,b as p,d as e,t as i}from"./index-1fc7690c.js";const u={data(){return{code:`const array = [1, 2, 3, 4, 5]
+import{_ as c,r as _,o as d,c as l,a as n,p as r,b as p,d as e,t as i}from"./index-1a03585d.js";const u={data(){return{code:`const array = [1, 2, 3, 4, 5]
 
 array.pickout(2)
 

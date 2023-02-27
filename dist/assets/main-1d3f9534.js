@@ -1,4 +1,4 @@
-import{_ as a,r as l,o as _,c as r,a as c,p as d,b as p,d as o,t as i}from"./index-1fc7690c.js";const u={data(){return{code:`import { buildBlankArgs } from "rtlink-core";
+import{_ as a,r as l,o as _,c as r,a as c,p as d,b as p,d as o,t as i}from"./index-1a03585d.js";const u={data(){return{code:`import { buildBlankArgs } from "rtlink-core";
 
 const obj = buildBlankArgs();
 
