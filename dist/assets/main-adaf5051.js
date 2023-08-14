@@ -1,4 +1,4 @@
-import{_ as a,r as l,o as _,c as r,a as c,p as d,b as p,d as o,t as i}from"./index-1a03585d.js";const u={data(){return{code:`const array = [1, 2, 3, 4, 5]
+import{_ as a,r as l,o as _,c as r,a as c,p as d,b as p,d as o,t as i}from"./index-2736cbd4.js";const u={data(){return{code:`const array = [1, 2, 3, 4, 5]
 
 const got3 = array.contains(3)
 const got8 = array.contains(8)

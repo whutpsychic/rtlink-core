@@ -1,4 +1,4 @@
-import{_ as a,r as l,o as _,c as d,a as c,p as i,b as p,d as o,t as r}from"./index-1a03585d.js";const h={data(){return{code:`finalDo(() => {
+import{_ as a,r as l,o as _,c as d,a as c,p as i,b as p,d as o,t as r}from"./index-2736cbd4.js";const h={data(){return{code:`finalDo(() => {
   console.log(4)
 })
 

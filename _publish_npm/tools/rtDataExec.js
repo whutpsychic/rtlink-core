@@ -19,9 +19,9 @@ export const buildBlankArgs = () => {
 // 构造一个表格查询条件的传参
 // 此函数输出一个查询时的必要参数，可添加额外的传参
 // Author:zbc 
-// Last maintain time: 2023-02-13
+// Last maintain time: 2023-08-14
 // --------------------------------------------------------
-export const buildTableQueryParams = ({ querys = [], pageBean = {}, sorter = {} }, extraConditions = {}) => {
+export const buildTableQueryParams = ({ querys = [], pageBean = {}, sorter }, extraConditions = {}) => {
 
   let _querys = []
 
@@ -35,26 +35,29 @@ export const buildTableQueryParams = ({ querys = [], pageBean = {}, sorter = {} 
   }
 
   for (let it in extraConditions) {
-    _querys.push({
-      "property": it,
-      "value": extraConditions[it]['value'],
-      "operation": extraConditions[it]['operation'],
-      "relation": extraConditions[it]['relation'],
-    })
+    if (extraConditions.hasOwnProperty(it)) {
+      let target = extraConditions[it]
+      if (target) {
+        _querys.push({
+          "property": it,
+          "value": target['value'],
+          "operation": target['operation'],
+          "relation": target['relation'],
+          "group": target['group'],
+        })
+      }
+    }
   }
 
   let obj = {
     querys: _querys,
-    "pageBean": {
+    pageBean: {
       "page": pageBean.page,
       "pageSize": pageBean.pageSize,
       "showTotal": true
     },
+    sorter
   }
 
   return obj
 }
-
-
-
-
