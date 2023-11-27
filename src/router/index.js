@@ -1,66 +1,77 @@
-import { createRouter, createWebHashHistory, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import Document from '../pages/Document/main.vue'
-import Guide from '../pages/Guide/main.vue'
-import DeepClone from "../views/deepClone/main.vue"
-import Test from "../pages/Test/main.vue"
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHashHistory(import.meta.env.BASE_URL),
   routes: [
-    // 默认展示 Document
     {
       path: '/',
-      redirect: '/document/deepClone'
+      redirect: '/document'
     },
-    // 默认 Document 展示第一个 deepClone
     {
       path: '/document',
-      redirect: '/document/deepClone'
+      redirect: '/document/fn/commaedNumber'
     },
+    // -------------------------------
     {
-      path: '/document/',
+      path: '/document',
       component: Document,
       children: [
-        { path: 'deepClone', component: DeepClone },
-        { path: 'genRandomNum', component: () => import('../views/genRandomNum/main.vue') },
-        { path: 'genDatesArr', component: () => import('../views/genDatesArr/main.vue') },
-        { path: 'genMonthsArr', component: () => import('../views/genMonthsArr/main.vue') },
-        { path: 'genNumberStream', component: () => import('../views/genNumberStream/main.vue') },
-        { path: 'genRandomCode', component: () => import('../views/genRandomCode/main.vue') },
-        { path: 'commaedNumber', component: () => import('../views/commaedNumber/main.vue') },
-        { path: 'Global.finalDo', component: () => import('../views/Global.finalDo/main.vue') },
-        { path: 'String.contains', component: () => import('../views/String.contains/main.vue') },
-        { path: 'Array.contains', component: () => import('../views/Array.contains/main.vue') },
-        { path: 'Array.pickout', component: () => import('../views/Array.pickout/main.vue') },
-        { path: 'Array.fillWith', component: () => import('../views/Array.fillWith/main.vue') },
-        { path: 'Array.toDoubleGroups', component: () => import('../views/Array.toDoubleGroups/main.vue') },
-        { path: 'formatDateTimeParams', component: () => import('../views/formatDateTimeParams/main.vue') },
-        { path: 'formatCascaderParams', component: () => import('../views/formatCascaderParams/main.vue') },
-        { path: 'execCascaderData', component: () => import('../views/execCascaderData/main.vue') },
-        { path: 'execTreeData', component: () => import('../views/execTreeData/main.vue') },
-        { path: 'tilingTreeData', component: () => import('../views/tilingTreeData/main.vue') },
-        { path: 'findTreeParentNodeIdAsCascader', component: () => import('../views/findTreeParentNodeIdAsCascader/main.vue') },
-        { path: 'format01Params', component: () => import('../views/format01Params/main.vue') },
-        { path: 'buildBlankArgs', component: () => import('../views/buildBlankArgs/main.vue') },
-        { path: 'buildTableQueryParams', component: () => import('../views/buildTableQueryParams/main.vue') },
+        {
+          path: '/document/fn/commaedNumber',
+          component: () => import('../views/fn/commaedNumber/main.vue'),
+        },
+        {
+          path: '/document/fn/genDatesArr',
+          component: () => import('../views/fn/genDatesArr/main.vue'),
+        },
+        {
+          path: '/document/fn/genMonthsArr',
+          component: () => import('../views/fn/genMonthsArr/main.vue'),
+        },
+        {
+          path: '/document/fn/genNumberStream',
+          component: () => import('../views/fn/genNumberStream/main.vue'),
+        },
+        {
+          path: '/document/fn/genRandomCode',
+          component: () => import('../views/fn/genRandomCode/main.vue'),
+        },
+        {
+          path: '/document/fn/genRandomNum',
+          component: () => import('../views/fn/genRandomNum/main.vue'),
+        },
+        // ---------------------------------------------
+        {
+          path: '/document/global/finalDo',
+          component: () => import('../views/global/finalDo/main.vue'),
+        },
+        // ---------------------------------------------
+        {
+          path: '/document/prototype/Array/contains',
+          component: () => import('../views/prototype.Array/contains/main.vue'),
+        },
+        {
+          path: '/document/prototype/Array/fillWith',
+          component: () => import('../views/prototype.Array/fillWith/main.vue'),
+        },
+        {
+          path: '/document/prototype/Array/pickout',
+          component: () => import('../views/prototype.Array/pickout/main.vue'),
+        },
+        {
+          path: '/document/prototype/Array/toDoubleGroups',
+          component: () => import('../views/prototype.Array/toDoubleGroups/main.vue'),
+        },
       ]
     },
     {
       path: '/guide',
-      name: 'guide',
-      component: Guide
-    },
-    // 测试
-    {
-      path: '/test',
-      name: 'test',
-      component: Test
-    },
-    // // 默认返回
-    // {
-    //   path: '/:pathMatch(.*)',
-    //   redirect: '/document/deepClone'
-    // },
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../pages/Guide/main.vue')
+    }
   ]
 })
 

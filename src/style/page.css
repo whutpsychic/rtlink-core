@@ -1,0 +1,10 @@
+.page-container {
+  min-width: 1000px;
+  display: flex;
+  justify-content: center;
+}
+
+.main-content {
+  width: 1000px;
+  background-color: orange;
+}

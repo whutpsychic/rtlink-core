@@ -1,17 +1,6 @@
 <template>
-  <div class="main-content">
-    <p>Guide</p>
-  </div>
+  <main>guide</main>
 </template>
 
-<script>
-
-export default {
-  mounted() { },
-}
-
+<script setup>
 </script>
-
-<style scoped>
-
-</style>

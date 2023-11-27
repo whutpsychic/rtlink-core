@@ -1,19 +1,9 @@
 <template>
-  <div class="page-outer-container">
-    <div class="main-page-content-container">
-      <Topbar />
-      <div class="main-content">
-        <RouterView />
-      </div>
-    </div>
-  </div>
+  <TopBar />
+  <RouterView />
 </template>
 
-<script>
-import Topbar from "@/components/Topbar.vue"
+<script setup>
+import TopBar from '@/components/TopBar/main.vue'
 import { RouterView } from 'vue-router'
-
-export default {
-  components: { Topbar },
-}
 </script>

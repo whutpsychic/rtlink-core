@@ -1,0 +1,14 @@
+# vue3 project
+node_modules
+public
+src
+dist
+
+.eslintrc.cjs
+.gitignore
+index.html
+env.d.js
+vite.config.js
+
+# editor
+.vscode

@@ -1,0 +1,4 @@
+/* 针对 element plus 做的样式调整 */
+.top-bar-menu.el-menu--horizontal.el-menu {
+  border-bottom: none;
+}
