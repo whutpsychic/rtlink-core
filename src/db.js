@@ -1,6 +1,7 @@
 // 纯函数
 export const fn = [
   { name: 'commaedNumber', title: '西化数字' },
+  { name: 'copyToClipboard', title: '复制文字到剪贴板' },
   { name: 'genDatesArr', title: '生成日期数组' },
   { name: 'genMonthsArr', title: '生成月份数组' },
   { name: 'genYearsArr', title: '生成年份数组' },
@@ -12,8 +13,8 @@ export const fn = [
 // prototype Array
 export const prototype_array = [
   { name: 'contains', title: '检测是否包含子项' },
-  { name: 'pickout', title: '将某项摘除' },
   { name: 'fillWith', title: '数组填充' },
+  { name: 'pickout', title: '将某项摘除' },
   { name: 'toDoubleGroups', title: '分为两组式' },
 ]
 

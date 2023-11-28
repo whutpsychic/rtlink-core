@@ -22,6 +22,10 @@ const router = createRouter({
           component: () => import('../views/fn/commaedNumber/main.vue'),
         },
         {
+          path: '/document/fn/copyToClipboard',
+          component: () => import('../views/fn/copyToClipboard/main.vue'),
+        },
+        {
           path: '/document/fn/genDatesArr',
           component: () => import('../views/fn/genDatesArr/main.vue'),
         },
