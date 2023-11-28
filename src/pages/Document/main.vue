@@ -1,7 +1,7 @@
 <template>
   <main>
     <div class="left-menu-can">
-      <el-menu :default-active="fn[0].name" @select="onSelectMenu">
+      <el-menu :default-active="defaultActiveName" @select="onSelectMenu" unique-opened>
         <el-sub-menu index="fn">
           <template #title>
             <p class="menu-sub-title">纯函数</p>
@@ -49,15 +49,27 @@
 </template>
 
 <script setup>
-import { RouterView } from 'vue-router'
-import { useRouter } from 'vue-router'
+import { onMounted, ref } from 'vue'
+import { RouterView, useRouter, useRoute } from 'vue-router'
 import { fn, global, prototype_array } from '@/db.js'
 
 const router = useRouter()
+const route = useRoute()
+
+const defaultActiveName = ref(fn[0].name)
 
 const onSelectMenu = (menu, paths) => {
   router.push(`/document/${paths.join('/')}`)
 }
+
+onMounted(() => {
+  const pathArr = route.path.split('/')
+  const L = pathArr.length
+  const targetName = pathArr[L - 1]
+  defaultActiveName.value = targetName
+})
+
+
 </script>
 
 <style scoped>

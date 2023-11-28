@@ -19,6 +19,7 @@
     "vue": "3"
   },
   "devDependencies": {
+    "@highlightjs/vue-plugin": "^2.1.0",
     "@rushstack/eslint-patch": "^1.1.4",
     "@types/node": "^18.11.12",
     "@vitejs/plugin-vue": "^4.0.0",
@@ -29,6 +30,7 @@
     "element-plus": "^2.4.2",
     "eslint": "^8.22.0",
     "eslint-plugin-vue": "^9.3.0",
+    "highlight.js": "^11.9.0",
     "npm-run-all": "^4.1.5",
     "pinia": "^2.0.28",
     "prettier": "^2.7.1",
@@ -53,5 +55,8 @@
   "bugs": {
     "url": "https://github.com/whutpsychic/rtlink-core/issues"
   },
-  "homepage": "https://github.com/whutpsychic/rtlink-core#readme"
+  "homepage": "https://github.com/whutpsychic/rtlink-core#readme",
+  "dependencies": {
+    "dayjs": "^1.11.10"
+  }
 }

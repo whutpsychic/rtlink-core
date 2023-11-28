@@ -7,11 +7,16 @@ import router from './router'
 
 import './style/main.css'
 
+import 'highlight.js/styles/rainbow.min.css'
+import 'highlight.js/lib/common'
+import hljsVuePlugin from '@highlightjs/vue-plugin'
+
 const app = createApp(App)
 
 app.use(createPinia())
 app.use(router)
 
 app.use(ElementPlus, { size: 'small', zIndex: 3000 })
+app.use(hljsVuePlugin)
 
 app.mount('#app')

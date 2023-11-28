@@ -3,9 +3,10 @@ export const fn = [
   { name: 'commaedNumber', title: '西化数字' },
   { name: 'genDatesArr', title: '生成日期数组' },
   { name: 'genMonthsArr', title: '生成月份数组' },
+  { name: 'genYearsArr', title: '生成年份数组' },
   { name: 'genNumberStream', title: '生成数字序列' },
   { name: 'genRandomCode', title: '生成随机编码' },
-  { name: 'genRandomNum', title: '生成随机数' },
+  { name: 'genRandomNumber', title: '生成随机数' },
 ]
 
 // prototype Array

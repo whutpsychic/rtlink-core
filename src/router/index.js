@@ -30,6 +30,10 @@ const router = createRouter({
           component: () => import('../views/fn/genMonthsArr/main.vue'),
         },
         {
+          path: '/document/fn/genYearsArr',
+          component: () => import('../views/fn/genYearsArr/main.vue'),
+        },
+        {
           path: '/document/fn/genNumberStream',
           component: () => import('../views/fn/genNumberStream/main.vue'),
         },
@@ -38,8 +42,8 @@ const router = createRouter({
           component: () => import('../views/fn/genRandomCode/main.vue'),
         },
         {
-          path: '/document/fn/genRandomNum',
-          component: () => import('../views/fn/genRandomNum/main.vue'),
+          path: '/document/fn/genRandomNumber',
+          component: () => import('../views/fn/genRandomNumber/main.vue'),
         },
         // ---------------------------------------------
         {

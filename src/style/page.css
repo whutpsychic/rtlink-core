@@ -5,6 +5,10 @@
 }
 
 .main-content {
-  width: 1000px;
-  background-color: orange;
+  width: 960px;
+  padding: 20px;
+}
+
+.result-spliter {
+  margin: 1em 0;
 }
