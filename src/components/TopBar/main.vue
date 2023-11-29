@@ -6,7 +6,7 @@
     <div class="right-content">
       <el-menu :default-active="state.activeIndex" class="top-bar-menu" mode="horizontal" :ellipsis="false"
         @select="handleSelect">
-        <el-menu-item index="guide" disabled>指南</el-menu-item>
+        <el-menu-item index="guide">指南</el-menu-item>
         <el-menu-item index="document">文档</el-menu-item>
       </el-menu>
       <span>v{{ version }}</span>
@@ -16,7 +16,7 @@
 </template>
 
 <script setup>
-import { ref, reactive } from 'vue'
+import { ref, reactive, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import pj from '~/package.json'
 
@@ -30,6 +30,18 @@ const state = reactive({
 const handleSelect = (menu) => {
   router.push(`/${menu}`)
 }
+
+// 修正顶部默认显示的标签
+onMounted(() => {
+  const hashRoute = window.location.hash
+
+  if (hashRoute.indexOf('#/guide') > -1) {
+    state.activeIndex = 'guide'
+  }
+  else if (hashRoute.indexOf('#/document') > -1) {
+    state.activeIndex = 'document'
+  }
+})
 
 </script>
 

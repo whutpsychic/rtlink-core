@@ -14,7 +14,6 @@
 </template>
 
 <script setup>
-import { genRandomCode } from '$'
 const code = `import { genRandomCode } from "rtlink-core";
 
 const code1 = genRandomCode();
@@ -53,20 +52,6 @@ PMLLGATR
   "fmoyxyucgjnlmrlxqw",
   "epbautwgdzgpyjncpg"
 ]`
-
-const code1 = genRandomCode();
-const code22 = genRandomCode(null, 8);
-const code3 = genRandomCode(null, 8, 6);
-const code4 = genRandomCode("number", 8);
-const code5 = genRandomCode("CHAR", 8);
-const code6 = genRandomCode("char", 18, 5);
-
-console.log(code1);
-console.log(code22);
-console.log(code3);
-console.log(code4);
-console.log(code5);
-console.log(code6);
 
 </script>
 

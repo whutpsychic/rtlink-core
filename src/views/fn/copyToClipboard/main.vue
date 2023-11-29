@@ -8,11 +8,11 @@
       <div class="spliter" />
       <h4>试一试</h4>
       <div class="spliter" />
-      <el-input v-model="textarea" :rows="2" type="textarea" placeholder="Please input" />
+      <el-input v-model="textarea" :rows="2" type="textarea" placeholder="请在这里输入要复制的内容" />
       <div class="spliter" />
       <el-button type="primary" @click="copy">copy!</el-button>
       <div class="spliter" />
-      <el-input v-model="textarea2" :rows="2" type="textarea" placeholder="Please input" />
+      <el-input v-model="textarea2" :rows="2" type="textarea" placeholder="粘贴在这里试试" />
     </div>
   </div>
 </template>
@@ -29,6 +29,15 @@ const copy = () => {
   const text = textarea.value;
 
   copyToClipboard(text).then(() => {
+
+    if (!textarea.value) {
+      ElMessage({
+        message: '请先输入一些要复制的内容',
+        type: 'warning',
+      })
+      return
+    }
+
     ElMessage({
       message: '已成功复制到剪贴板！',
       type: 'success',

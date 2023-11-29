@@ -1,6 +1,6 @@
 {
   "name": "rtlink-core",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This is core logics for h5 from rtzl-zbc.",
   "main": "index.js",
   "directories": {
@@ -14,9 +14,6 @@
     "build-only": "vite build",
     "type-check": "vue-tsc --noEmit",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
-  },
-  "peerDependencies": {
-    "vue": "3"
   },
   "devDependencies": {
     "@highlightjs/vue-plugin": "^2.1.0",
