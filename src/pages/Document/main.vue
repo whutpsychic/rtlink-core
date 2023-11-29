@@ -91,7 +91,6 @@ main {
 .menu-sub-title {
   font-size: 16px;
   font-weight: bold;
-  color: #233;
 }
 
 .menu-sub-title.sub {

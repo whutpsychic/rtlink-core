@@ -6,6 +6,15 @@
   padding: 0;
 }
 
+html {
+  transition: .3s;
+  background-color: white;
+}
+
+html.dark {
+  background-color: #111;
+}
+
 #app {
   font-weight: normal;
 }

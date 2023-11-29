@@ -1,4 +1,4 @@
-import{r as s,o as n,c as o,a as e,b as r,t as a}from"./index-0f28a4ff.js";const c={class:"page-container"},l={class:"main-content"},i=e("h2",null,a("Array<String>"),-1),_=e("h3",null,"genDatesArr(startDate: [ String? | Date? | Dayjs? ], n: number, direct: Boolean) 生成日期数组",-1),g=e("h4",null,"Default: startDate = new Date(), n = 7, direct = false",-1),d=e("p",null,"生成一个以某天为起始，之前n天或之后n天的字符串数组。当 direct 为 true 时向后查数。",-1),u=e("p",{class:"result-spliter"},"********************* 运行结果 *********************",-1),p=`import { genDatesArr } from "rtlink-core";
+import{r as s,o as n,c as o,a as e,b as r,t as a}from"./index-0d50b54c.js";const c={class:"page-container"},l={class:"main-content"},i=e("h2",null,a("Array<String>"),-1),_=e("h3",null,"genDatesArr(startDate: [ String? | Date? | Dayjs? ], n: number, direct: Boolean) 生成日期数组",-1),g=e("h4",null,"Default: startDate = new Date(), n = 7, direct = false",-1),d=e("p",null,"生成一个以某天为起始，之前n天或之后n天的字符串数组。当 direct 为 true 时向后查数。",-1),u=e("p",{class:"result-spliter"},"********************* 运行结果 *********************",-1),p=`import { genDatesArr } from "rtlink-core";
 import dayjs from "dayjs";
 
 // run in 2023-11-27

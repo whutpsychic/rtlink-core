@@ -1,4 +1,4 @@
-import{r as n,o as l,c,a as e,b as o,h as a}from"./index-0f28a4ff.js";const i={class:"page-container"},_={class:"main-content"},r=e("h2",null,"void",-1),d=e("h3",null,"finalDo(fn: Function) 最后执行",-1),h=e("p",null,"在 js 线程中，最后执行 fn 函数。不返回任何结果。",-1),p=e("div",{class:"spliter"},null,-1),g=e("div",{class:"spliter"},null,-1),u=e("p",{class:"result-spliter"},"********************* 运行结果 *********************",-1),m=`finalDo(()=>{
+import{r as n,o as l,c,a as e,b as o,h as a}from"./index-0d50b54c.js";const i={class:"page-container"},_={class:"main-content"},r=e("h2",null,"void",-1),d=e("h3",null,"finalDo(fn: Function) 最后执行",-1),h=e("p",null,"在 js 线程中，最后执行 fn 函数。不返回任何结果。",-1),p=e("div",{class:"spliter"},null,-1),g=e("div",{class:"spliter"},null,-1),u=e("p",{class:"result-spliter"},"********************* 运行结果 *********************",-1),m=`finalDo(()=>{
   console.log(4)
 })
 console.log(1)
