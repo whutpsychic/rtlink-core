@@ -1,4 +1,4 @@
-import{r,o as e,c as s,a as n,b as t,t as a}from"./index-0d50b54c.js";const c={class:"page-container"},l={class:"main-content"},i=n("h2",null,a("Array<String>"),-1),_=n("h3",null,"genMonthsArr(startMonth: [ String? | Date? | Dayjs? ], n: number, direct: Boolean) 生成月份数组",-1),g=n("h4",null,"Default: startMonth = new Date(), n = 7, direct = false",-1),h=n("p",null,"生成一个以某天为起始，之前n个月或之后n个月的字符串数组。当 direct 为 true 时向后查数。",-1),d=n("p",{class:"result-spliter"},"********************* 运行结果 *********************",-1),u=`import { genMonthsArr } from "rtlink-core";
+import{r,o as e,c as s,a as n,b as t,t as a}from"./index-af87bf53.js";const c={class:"page-container"},l={class:"main-content"},i=n("h2",null,a("Array<String>"),-1),_=n("h3",null,"genMonthsArr(startMonth: [ String? | Date? | Dayjs? ], n: number, direct: Boolean) 生成月份数组",-1),g=n("h4",null,"Default: startMonth = new Date(), n = 7, direct = false",-1),h=n("p",null,"生成一个以某天为起始，之前n个月或之后n个月的字符串数组。当 direct 为 true 时向后查数。",-1),d=n("p",{class:"result-spliter"},"********************* 运行结果 *********************",-1),u=`import { genMonthsArr } from "rtlink-core";
 import dayjs from "dayjs";
 
 // run in 2023-11-27

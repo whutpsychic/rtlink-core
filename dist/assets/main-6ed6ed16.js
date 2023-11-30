@@ -1,0 +1,7 @@
+import{_ as i,r,o as d,c as p,a as e,b as o,w as a,i as u,g as m,p as h,j as g,k as f,l as v}from"./index-af87bf53.js";const t=s=>(h("data-v-54f9feaa"),s=s(),g(),s),k={class:"left-menu-can"},x={class:"right-content-can"},I={class:"page-container"},N={class:"main-content"},b=t(()=>e("h2",null,"快速开始",-1)),j=t(()=>e("p",null,"本节将介绍如何在项目中使用 rtlink-core。",-1)),y=t(()=>e("h3",null,"使用 npm 安装",-1)),E=t(()=>e("div",{class:"spliter"},null,-1)),M=t(()=>e("h3",null,"使用纯函数",-1)),w=t(()=>e("p",null,"例如：生成一个长度为5的随机数组",-1)),B=t(()=>e("div",{class:"spliter"},null,-1)),J=t(()=>e("h3",null,"初始化 proptype 函数",-1)),S=t(()=>e("p",null,"在 main.js 中写入以下内容：",-1)),V=t(()=>e("div",{class:"spliter"},null,-1)),C=t(()=>e("p",null,"然后您就可以在其后的任意位置直接调用全局函数和 prototype 相关函数了。",-1)),G="npm i rtlink-core -s",R=`import { genRandomNumber } from 'rtlink-core';
+
+const arr = genRandomNumber(0, 100, 5);
+
+console.log(arr)`,T=`import { rtc } from 'rtlink-core';
+
+rtc.init();`,q={__name:"main",setup(s){return(z,A)=>{const c=f,l=v,_=u,n=r("highlightjs");return d(),p("main",null,[e("div",k,[o(_,{"default-active":"install"},{default:a(()=>[o(l,{class:"item-group",title:"快速开始"},{default:a(()=>[o(c,{class:"el-item-bar",index:"install"},{default:a(()=>[m("安装")]),_:1})]),_:1})]),_:1})]),e("div",x,[e("div",I,[e("div",N,[b,j,y,o(n,{language:"Javascript",code:G}),E,M,w,o(n,{language:"Javascript",code:R}),B,J,S,o(n,{language:"Javascript",code:T}),V,C])])])])}}},F=i(q,[["__scopeId","data-v-54f9feaa"]]);export{F as default};

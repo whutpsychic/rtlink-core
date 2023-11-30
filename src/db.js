@@ -8,6 +8,7 @@ export const fn = [
   { name: 'genNumberStream', title: '生成数字序列' },
   { name: 'genRandomCode', title: '生成随机编码' },
   { name: 'genRandomNumber', title: '生成随机数' },
+  { name: 'isWeixin', title: '判断微信环境' },
 ]
 
 // prototype Array

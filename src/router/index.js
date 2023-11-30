@@ -49,6 +49,10 @@ const router = createRouter({
           path: '/document/fn/genRandomNumber',
           component: () => import('../views/fn/genRandomNumber/main.vue'),
         },
+        {
+          path: '/document/fn/isWeixin',
+          component: () => import('../views/fn/isWeixin/main.vue'),
+        },
         // ---------------------------------------------
         {
           path: '/document/global/finalDo',
