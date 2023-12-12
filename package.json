@@ -1,8 +1,8 @@
 {
   "name": "rtlink-core",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "This is core logics for h5 from rtzl-zbc.",
-  "main": "index.js",
+  "main": "lib/index.js",
   "directories": {
     "lib": "lib"
   },
